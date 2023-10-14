@@ -5,7 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 withCredentials([usernamePassword(credentialsId: 'lab_cred', passwordVariable: 'PASSWORD', usernameVariable: 'USERNAME')])
-                echo 'Building..' ${USERNAME}
+                echo Building.. ${USERNAME}
             }
         }
         stage('Test') {
